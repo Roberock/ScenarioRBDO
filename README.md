@@ -1,4 +1,4 @@
-# Given-data-Reliability-based-Desing-Optimization-via-Scenario-Theory
+# ScenarioRBDO
 ## LIST OF METHODS FOR THE CLASS ScenarioRBDO %%%%%%
 
 This class introduces a set of methods and proprieties to perform reliability-based-design-optimization by Scenario theory. 
