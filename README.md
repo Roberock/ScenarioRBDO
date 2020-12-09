@@ -7,6 +7,7 @@
   <img src="./figs/SoftConstrainedExample.png.png" alt="Size Limit CLI" width="350">
 </p>
 
+![alt text](https://github.com/Roberock/ScenarioRBDO/figs/SoftConstrainedExample.png)
 
 Codes to prun the analysis 
 **run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
