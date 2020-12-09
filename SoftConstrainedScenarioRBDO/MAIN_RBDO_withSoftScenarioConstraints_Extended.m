@@ -1,4 +1,6 @@
-clc; clear variables; close all
+clc;
+clear variables;
+close all
 %% CONSIDER THE FOLLOWING SCENARIO PRORAMs WITH SOFT-CONSTRAINTS: 
 
 % Program-1 (soft-constrained joint reliability requirements)
