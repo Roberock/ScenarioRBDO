@@ -1,0 +1,18 @@
+%% Script-1: Run Scenario Program optimizer and compare solution ot the nominal case and to alternative CVaR minimization algorithm
+options = optimoptions('fmincon','Algorithm','sqp','MaxFunctionEvaluations',50000); % spq is needed to guaratnee high accuracy
+RHO= 100; % weight given to the violation
+VaR=0; % this defines the value at risk to compute the CVAR
+%1) compute nomilan desing reliability
+Rel_nominal=ComputeReliabilityPerformance(dn, delta,g_fun);  % get reliability
+
+%2) run scenario program optimizer
+[Results,X_opt,J_opt,exitflag,output]=ScenarioOptimizerCVaR(VaR,w_fun,delta,J_fun,RHO,dn,LBd,UBd,options);
+Rel_sp_opt=ComputeReliabilityPerformance(Results.dopt ,delta,g_fun);  % get reliability
+
+%3) compare results with a program --> min_d {J(d)+CVaR_{F_w(0)}(d)}
+
+  X0=[dn]; % an initial guess 
+  Pf_fun=@(d) mean(w_fun(d,delta)>0);
+  CVAR_fun=@(d) CVaR(w_fun(d,delta),1-Pf_fun(d));
+ obj= @(x) J_fun(x(1:Nd))+(RHO*size(delta,2)*)*CVAR_fun(x(1:Nd)); % The cost function with slack variables J(d)+sum_i \zeta_i
+%
