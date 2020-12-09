@@ -51,14 +51,7 @@ s_N^* start is the complexity of the solution
 
 [] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design, Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
 
- 
-
-
-
-
-
-
-
+  
 
 
 ### Description of the CLASS ScenarioRBDO  (scenario RBDO for non convex problems)
@@ -70,7 +63,10 @@ thereby eliminating the need for estimating the distribution of the uncertain pa
 Furthermore, scenario theory enables rigorously quantifying the probability of the resulting design satisfying the reliability requirements
 imposed upon it regarding future, unseen data. (see Robustness methods) 
 
- 
+ <p align="center">
+  <img src="./figs/Case123_SupportIndividualRequirements.pdf" alt="Size Limit CLI" width="550">
+</p>
+
 
 
 ### Reliability Methods: 
