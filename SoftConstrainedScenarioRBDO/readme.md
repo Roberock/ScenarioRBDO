@@ -5,8 +5,8 @@ Codes to prun the analysis
 
 
 ### Program-1 (soft-constrained joint reliability requirements) %%%
-``` latex
- min_{d\in \Theta , \zeta^{(i)}>0} \ lbrace J(d) +\rho \sum\limits_{i=1}^{N}  \zeta^{(i)}
+``` Matlab 
+ % min_{d\in \Theta , \zeta^{(i)}>0} \ lbrace J(d) +\rho \sum\limits_{i=1}^{N}  \zeta^{(i)}
  Such that: w(d,\delta{(i)} \leq \zeta^{(i)} \rbrace
 
  where
