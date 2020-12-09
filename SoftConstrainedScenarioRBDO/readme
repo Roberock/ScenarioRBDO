@@ -1,7 +1,8 @@
 ### Codes to perform Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds
 
 
-run Main
+run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
+
 
 %%%  %%% Program-1 (soft-constrained joint reliability requirements)
 
