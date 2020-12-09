@@ -1,4 +1,4 @@
-### Codes to perform Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds
+**  Codes to perform Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds ** 
 
 
 run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
