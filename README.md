@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="./figs/For_ESREL_increasingrho_vsCostandFailureProbability.pdf" width="738">
+  <img src="./figs/SoftConstrainedExample.png.png" width="738">
 </p>
 
 
