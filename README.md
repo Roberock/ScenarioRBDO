@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="./figs/SoftConstrainedExample.png.png" alt="Size Limit CLI" width="738">
+  <img src="./figs/SoftConstrainedExample.png.png" alt="Size Limit CLI" width="350">
 </p>
 
 
