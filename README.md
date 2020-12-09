@@ -64,7 +64,7 @@ Furthermore, scenario theory enables rigorously quantifying the probability of t
 imposed upon it regarding future, unseen data. (see Robustness methods) 
 
  <p align="center">
-  <img src="./figs/Case123_SupportIndividualRequirements.pdf" alt="Size Limit CLI" width="550">
+  <img src="./figs/Individual_and_joint_failureRegions.png" alt="Size Limit CLI" width="550">
 </p>
 
 
