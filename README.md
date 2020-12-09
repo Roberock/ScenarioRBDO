@@ -1,7 +1,5 @@
 # ScenarioRBDO
-
-
-
+ 
 ## Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds
 Codes to prun the analysis 
 **run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
@@ -48,7 +46,15 @@ s_N^* start is the complexity of the solution
 
  
 
-## LIST OF METHODS FOR THE CLASS ScenarioRBDO  (to deal with non convex cases)
+
+
+
+
+
+
+
+
+### Description of the CLASS ScenarioRBDO  (scenario RBDO for non convex problems)
 
 This class introduces a set of methods and proprieties to perform reliability-based-design-optimization by Scenario theory. 
 Scenario optimization makes direct use of the available data (the uncertain parameters delta) 
@@ -90,11 +96,9 @@ imposed upon it regarding future, unseen data. (see Robustness methods)
 ###   Outlier Removal Method
      RemoveConstraints re-optimizes removing a list of scenario from the initial data set
 
-
-
-
+ 
 ###   Data visualization methods
-%    plot_deta_vs_G scatter: the scenarios in the uncertainty space (2-D) vs the performance function realizations
-%    plot_detaIndex_vs_G sort and plot the gj and the scenarios indices w.r.t. one of the reliability requirement
-%    plot_2D_SafeFailDomains_and_Scenarios % plot failure and safe regions
-%    Plot_ScenarioConstraints : plot a list of scenario constraints
+      plot_deta_vs_G scatter: the scenarios in the uncertainty space (2-D) vs the performance function realizations
+      plot_detaIndex_vs_G sort and plot the gj and the scenarios indices w.r.t. one of the reliability requirement
+      plot_2D_SafeFailDomains_and_Scenarios % plot failure and safe regions
+      Plot_ScenarioConstraints : plot a list of scenario constraints
