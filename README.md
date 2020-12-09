@@ -1,6 +1,13 @@
 # ScenarioRBDO
  
 ## Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds
+
+
+<p align="center">
+  <img src="./figs/For_ESREL_increasingrho_vsCostandFailureProbability.pdf" alt="Size Limit CLI" width="738">
+</p>
+
+
 Codes to prun the analysis 
 **run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
 
