@@ -1,6 +1,6 @@
 # ScenarioRBDO
  
-## Soft-Constrained Scenario RBDO: Complexity-based Modulation of Failure Probability Bounds
+## Soft-Constrained Scenario Reliability-Based Design Optimization (RBDO) 
 
 
 <p align="center">
