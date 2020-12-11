@@ -1,14 +1,26 @@
 # ScenarioRBDO
  
+### References
+
+**generalization bounds for convex scenario program with relaxed constraints 
+
+[] Garatti, Simone & Campi, Marco. (2019). Risk and complexity in scenario optimization. Mathematical Programming. https://doi.org/10.1007/s10107-019-01446-4
+
+**Scenario RBDO for non-convex problems
+
+[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design, Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
+
+
 ## Soft-Constrained Scenario Reliability-Based Design Optimization (RBDO) 
 
+This work uses scenario optimization theory to solve RBDO problems given data. Specifically,a soft-constrained optimization program is used to solve RBDO problems. A mode of the uncertainty it is not needed to carry on with the RBDO. Thus, scenario-based solutions of RBDO problems are not biased by unwarranted assumptions on the uncertain quantities given a lack of statistical samples. Scenario theory prescribes powerful  bounds on the reliability of the system. These bounds (prospective-reliability bounds) hold distribution free, non asymptotically and quantify the uncertainty affecting the desing and which is due to 1) lack of data  2) overly complex design solutoins 
 
 <p align="center">
   <img src="./figs/SoftConstrainedExample.png" alt="Size Limit CLI" width="550">
 </p>
  
 
-Codes to prun the analysis 
+An example is presented in: 
 **run MAIN_RBDO_withSoftScenarioConstraints_Extended.m
 
 ### Program-1 (soft-constrained joint reliability requirements)
@@ -41,15 +53,6 @@ fixing a confidence \epsilon is a function f(N,\beta,sN^*)
 where N is the number of samples in program 1 and 2 and
 s_N^* start is the complexity of the solution
 
-### References
-
-**generalization bounds for convex scenario program with relaxed constraints 
-
-[] Garatti, Simone & Campi, Marco. (2019). Risk and complexity in scenario optimization. Mathematical Programming. https://doi.org/10.1007/s10107-019-01446-4
-
-**Scenario RBDO for non-convex problems
-
-[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design, Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
 
   
 
