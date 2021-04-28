@@ -10,6 +10,8 @@
 
 [] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design, Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
 
+[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, Solution of the benchmark control problem by scenario optimization, Dynamic Systems and Control Conference, 2019, https://doi.org/10.1115/DSCC2019-8949
+
 
 ## Soft-Constrained Scenario Reliability-Based Design Optimization (RBDO) 
 
