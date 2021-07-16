@@ -2,15 +2,17 @@
  
 ### References
 
-**generalization bounds for convex scenario program with relaxed constraints 
+**Scenario Risk-based design for convex reliability functions (constraints relaxation) 
 
 [] Garatti, Simone & Campi, Marco. (2019). Risk and complexity in scenario optimization. Mathematical Programming. https://doi.org/10.1007/s10107-019-01446-4
 
-**Scenario RBDO for non-convex problems
+[] Roberto Rocchetta, Luis G. Crespo, "_A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds_" , Reliability Engineering & System Safety, Volume -, 2021, ...
 
-[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design, Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
+** Scenario RBDO for non-convex problems
 
-[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, Solution of the benchmark control problem by scenario optimization, Dynamic Systems and Control Conference, 2019, https://doi.org/10.1115/DSCC2019-8949
+[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, "_A scenario optimization approach to reliability-based design_", Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
+
+[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, "_Solution of the benchmark control problem by scenario optimization_", Dynamic Systems and Control Conference, 2019, https://doi.org/10.1115/DSCC2019-8949
 
 
 ## Soft-Constrained Scenario Reliability-Based Design Optimization (RBDO) 
