@@ -44,7 +44,7 @@ References
 Bounds derived and applied in:
  -  [] Garatti, Simone & Campi, Marco. (2019). Risk and complexity in scenario optimization. 
         Mathematical Programming. https://doi.org/10.1007/s10107-019-01446-4
- 
+   - [] Roberto Rocchetta, Luis G. Crespo, A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds,  Reliability Engineering & System Safety, 2021, -. 
 ###  non-convex Scenario RBDO  
 
   - [] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, A scenario optimization approach to reliability-based design,
