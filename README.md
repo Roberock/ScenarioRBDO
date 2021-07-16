@@ -41,7 +41,7 @@ An example is presented in:
  n_g  is the number of individual reliability requirements defined by the performance functions g_j j=1,...,n_g
  ```
 ### Program-2 (soft-constrained individual reliability requirements)
-```
+```math
 % min_{d\in \Theta , \zeta_j^{(i)}>0} \ lbrace J(d) +\sum\limits_{j=1}^{n_g} \rho_j \sum\limits_{i=1}^{N}  \zeta_j^{(i)}
 % Such that: g_j(d,\delta) \leq \zeta_j^{(i)} i=1,...,N,~j=1,..,n_g\rbrace
 % where $\rho_j$ are parameters weighting the cost of violation on the reliability requirement g_j
