@@ -34,9 +34,8 @@ close all
 % beta = reliability parameter
 % sN = number of support scenario
 
-
-%% Load RBDO problem
-CASESTUDY=1; % select case study
+%% Load data for the reliability optimization RBDO problem
+CASESTUDY=3; % select case study
 N=200;  % available samples
 [g_fun,delta,dn,LBd,UBd,DGM,Nd,Ng]=Select_Convex_Case_Study(N,CASESTUDY);
 N_testing=10^6;  % number of scenarios for validation
@@ -81,7 +80,7 @@ options = optimoptions('fmincon','Algorithm','sqp','MaxFunctionEvaluations',5000
 options = optimoptions('fmincon','Algorithm','sqp','MaxFunctionEvaluations',50000,'Display','iter'); % spq is needed to guaratnee high accuracy
 RHO= 100; % weight given to the violation
 VaR=0; % this defines a value-at-risk for w (VaR=0 corresponds to a classical reliability problem)
-[Results,X_opt,Obj_opt,~,~]=ScenarioOptimizerCVaR_program1(VaR,w_fun,delta,J_fun,RHO,dn,LBd,UBd,options);
+[Results,X_opt,Obj_opt,EF,REsopt]=ScenarioOptimizerCVaR_program1(VaR,w_fun,delta,J_fun,RHO,dn,LBd,UBd,options);
 Rel_sp_opt=ComputeReliabilityPerformance(Results.dopt ,delta,g_fun);  % get reliability
 sN=Results.Support.Size; % get size of the support sceanarios
 sNj=sum(Rel_sp_opt.g>=0);

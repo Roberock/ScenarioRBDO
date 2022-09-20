@@ -18,28 +18,27 @@ function [g_fun,delta,dn,LBd,UBd,DGM,Nd,Ng]=Select_Convex_Case_Study(N,Case_LSF)
 
 %% START
 addpath([pwd '\G_functions'])
+rng default % rest random seed for reproducibility
+
 if Case_LSF==0 %   linear competitive
     
     %% Define Data-Generating-Mechanism and sample N scenarios delta
-    rng default % rest random seed for reproducibility
     DGM= @(N)  mvnrnd([0 0],[1  0; 0 2^2],N); % data generating mechanism
-    delta=DGM(N); % available samples 
+    delta=DGM(N); % available samples
     %% Define Data-Generating-Mechanism and sample N scenarios delta
     dn=[1,1,1];
-    Nd=length(dn); Ng=2; 
+    Nd=length(dn); Ng=2;
     LBd= [0.5, 0.5, 0.5] ;  % design's lower bounds
     UBd= [2 , 2 , 2];  % design's upper bounds
-    g1=@(d,delta) delta(:,2)./d(1) + delta(:,1)./d(2) - d(3); 
+    g1=@(d,delta) delta(:,2)./d(1) + delta(:,1)./d(2) - d(3);
     g2=@(d,delta) d(1)*(delta(:,1)) - delta(:,2)./d(2) - d(3);
     g_fun=@(d,delta) [g1(d,delta) g2(d,delta)];
-   
-elseif Case_LSF==1 %    Grooteman 2011
     
+elseif Case_LSF==1 %    Grooteman 2011
     %% Define Data-Generating-Mechanism and sample N scenarios delta
     rng default % rest random seed for reproducibility
     DGM= @(N)  mvnrnd([0 0],[1  0; 0 2^2],N); % data generating mechanism
     delta=DGM(N); % available samples
-    
     %% Define Data-Generating-Mechanism and sample N scenarios delta
     dn=[2.5,0.2,0.06];
     Nd=length(dn);
@@ -74,13 +73,13 @@ elseif Case_LSF==3  %
     UBd= [3 , 1.5  ];  % design's upper bounds
     g_fun=@(d,delta) ((delta(:,1).^2+d(1)^2).*(delta(:,2)-d(2)))./20-d(2).*sin(5.*delta(:,1)./2)-2;
     Ng=length(g_fun(dn,delta(1,:)));
-    elseif Case_LSF==4  % manufacturer produces goods problem
+elseif Case_LSF==4  % manufacturer produces goods problem
     % Authors:  Garatti Campi 2019, Riskandcomplexityinscenariooptimization, MathematicalProgramming https://doi.org/10.1007/s10107-019-01446-4
     % modified by R. Rocchetta 2020
     %% Define Data-Generating-Mechanism and sample N scenarios delta
     rng default % rest random seed for reproducibility
-    Nd=50; % Nd workplaces  
-    Nk=5;  % Number of resources k used to produce the 
+    Nd=50; % Nd workplaces
+    Nk=5;  % Number of resources k used to produce the
     alphas= @(N) unifrnd(10,50,[N,Nk]);
     gammas= @(N)  unifrnd(-2.5,+2.5,[N,Nk*Nd]);
     DGM= @(N) [alphas(N) gammas(N)];
@@ -92,13 +91,12 @@ elseif Case_LSF==3  %
     a=ones(1,Nk); % treshold on the workplace budget (?)
     a=[1 3 1 5 4];
     g_fun= @(d,delta) g_manufacturer_goods(d,delta,Nk,a);
-    Ng=Nk; 
-elseif Case_LSF==5 %     % OTL CIRCUIT FUNCTION
+    Ng=Nk;
+elseif Case_LSF==5 %     % OTL CIRCUIT FUNCTION (non-convex..)
     % Authors: Sonja Surjanovic, Simon Fraser University
     %          Derek Bingham, Simon Fraser University
-    % modified by R. Rocchetta 2020
-    %% Define Data-Generating-Mechanism and sample N scenarios delta
-    rng default % rest random seed for reproducibility
+    % modified by Rocchetta 2020
+    %% Define Data-Generating-Mechanism and sample N scenarios delta 
     DGM= @(N) mvnrnd([0,0,0,0,0,0],[7.5,3.5,0.15,0.125,0.06,15].^2,N);
     delta =DGM(N);
     %% g function, baseline desing and desing bounds
@@ -109,11 +107,23 @@ elseif Case_LSF==5 %     % OTL CIRCUIT FUNCTION
     g_fun= @(d,delta) gfun_otlcircuit(d,delta);
     Ng=length(g_fun(dn,delta(1,:)));
     
+    
+elseif Case_LSF==15 % big size delta
+    %% Define Data-Generating-Mechanism and sample N scenarios delta 
+    DGM= @(N) betarnd(2,0.2,[1,N])+ betarnd(0.1,2,[1,N]).^2;
+    delta =DGM(N);
+    %% g function, baseline desing and desing bounds 
+    yfun = @(delta,theta) theta(3)*delta(:,1).^2 .*sqrt(4*delta(:,2)+0.25*delta(:,3)+1)+(sum(theta(1:2))-0.5).^2; % system function
+    g_fun= @(d,delta) yfun(delta,d)-3; %  
+    dn=[1 2 3];
+    Nd=length(dn);
+    LBd= [-10 -10 -10] ;  % design's lower bounds
+    UBd= [10 10 10];  % design's upper bounds  
+    
 elseif Case_LSF==15 % big size delta
     Ndelta=90;
     Nd=6;
-    %% Define Data-Generating-Mechanism and sample N scenarios delta
-    rng default % rest random seed for reproducibility
+    %% Define Data-Generating-Mechanism and sample N scenarios delta 
     Lb_delta = ones(1,Ndelta);
     Ub_delta = ones(1,Ndelta).*(randi(10,[1,Ndelta])+1);
     DGM=@(N) unifrnd(Lb_delta,Ub_delta,N);
@@ -134,8 +144,6 @@ elseif Case_LSF==15 % big size delta
     %% G all
     g_fun=@(d,delta) [g_1(d,delta)  g_2(d,delta)  g_3(d,delta) ];
     Ng=length(g_fun(dn,delta(1,:)));
-    
-    
     %% ALTERNATIVE CASE STUDIES
     
     %% %%%%%%%%%%%%%%%%%%%   problem 1: Linear-Competitive (g1,g2) %%%%%%%%%%%%%%%%%%%%%%%%%%

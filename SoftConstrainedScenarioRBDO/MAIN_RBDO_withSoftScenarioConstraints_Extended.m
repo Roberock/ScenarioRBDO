@@ -1,61 +1,45 @@
-clc;
-clear variables;
-close all
+clc; clear variables; close all
 %% CONSIDER THE FOLLOWING SCENARIO PRORAMs WITH SOFT-CONSTRAINTS: 
-
-% Program-1 (soft-constrained joint reliability requirements)
-
+% Program-1
 % min_{d\in \Theta , \zeta^{(i)}>0} \ lbrace J(d) +\rho \sum\limits_{i=1}^{N}  \zeta^{(i)}
 % Such that: w(d,\delta{(i)} \leq \zeta^{(i)} \rbrace
-
-% where
-% \delta are the available scenarios (samples of the uncertain factors)
-%  d\in \Thetaa is a design vector (e.g. fitting coefficients, tunable parameters etc) in a convex design set \Theta
-% J(d) is a convex cost function
-% $\rho$ is a parameter weighting the cost of violating constraints and
-% w(d,\delta)=\max\limits_{j\in\{1,..,n_g \}| g_j(d,\delta) % w is a convex worst-case reliability performance function,
-% n_g  is the number of individual reliability requirements defined by the performance functions g_j j=1,...,n_g
-
-% Program-2 (soft-constrained individual reliability requirements)
-
+% where $\rho$ is a parameter weighting the cost of violation for w and
+% w(d,\delta)=\max\limits_{j\in\{1,..,n_g \}| g_j(d,\delta) %worst-case reliability performance function
+% Program-2
 % min_{d\in \Theta , \zeta_j^{(i)}>0} \ lbrace J(d) +\sum\limits_{j=1}^{n_g} \rho_j \sum\limits_{i=1}^{N}  \zeta_j^{(i)}
 % Such that: g_j(d,\delta) \leq \zeta_j^{(i)} i=1,...,N,~j=1,..,n_g\rbrace
 % where $\rho_j$ are parameters weighting the cost of violation on the reliability requirement g_j
 
 % for this probelm the support scenarios (complexity0 will be equal to
 % S_N^*= the number of active constriaints + the number of violating constraints
-
-
-%% Generate sample and define the case study
-CASESTUDY=2; % the index of the case study to be analyzed
-N=200;  % number of available scenarios
-[g_fun,delta,dn,LBd,UBd,DGM,Nd,Ng]=Select_Convex_Case_Study(N,CASESTUDY); % case study loader
+%% START with PROGRAM-1
+%% Load Case study
+CASESTUDY=2;
+N=200;  % available samples
+[g_fun,delta,dn,LBd,UBd,DGM,Nd,Ng]=Select_Convex_Case_Study(N,CASESTUDY);
 N_testing=10^5;  % number of scenarios for validation
 delta_testing=DGM(N_testing); % generate more scenarios for validation
 J_fun= @(d) sum(d); % define cost function
-% g_fun=@(d,delta) g_fun(d,delta)./(1+abs(g_fun(d,delta))); % normalize g scores
+% g_fun=@(d,delta) g_fun(d,delta)./(1+abs(g_fun(d,delta)))
 w_fun=@(d,delta) max(g_fun(d,delta),[],2); % Worst-Case-Performance function
- 
-%% START with PROGRAM-1
-
-%% experiment-1: Run Scenario Program optimizer and compare solution ot the nominal case and to alternative CVaR minimization algorithm
+%w_fun=@(d,delta) w_fun(d,delta)./(1+abs(w_fun(d,delta)));
+%% Script-1: Run Scenario Program optimizer and compare solution ot the nominal case and to alternative CVaR minimization algorithm
 %% Experiment 1: SP run for for \lambda=0 and \rho=100 compare to nominal desing
-options = optimoptions('fmincon','Algorithm','sqp','MaxFunctionEvaluations',50000); % define options for fmincon optimizer
+options = optimoptions('fmincon','Algorithm','sqp','MaxFunctionEvaluations',50000);
 Script1
-%Table_1 % to visualize results
-%% experiment-2:  run for increasing Number of samples, N=linspace(,,)
+%Table_1
+%% Script-2:  run for increasing Number of samples, N=linspace(,,)
 Script2
-%Table_2 % to visualize results
-%% experiment-3:  run for increasing Number of samples, N=linspace(,,)
+%Table_2
+%% Script-3:  run for increasing Number of samples, N=linspace(,,)
 Script3
-%% experiment 4: OPTIMIZE for N=linspace() lambda=linspace( ) and rho=100
+%% Script 4: OPTIMIZE for N=linspace() lambda=linspace( ) and rho=100
 Script4
  
-%% Experiment 5: OPTIMIZE for lambda=0 and rho=linspace(0,100,50)
+%% Experiment 3: OPTIMIZE for lambda=0 and rho=linspace(0,100,50)
 Nrhos=50;
 RHOvals= linspace(0,100,Nrhos) ;
 [AlphaValueAtRisk,CVAR,Pf_all,Jopt,SupportSize,epsilon_rho_convex,epsilon_rho_nnconvex,Alpha_true,CVAR_true,Pf_true]=deal(zeros(1,Nrhos));
-
 for i=1:length(RHOvals)
     display(num2str(i));
     VaR=0; % this defines the value at risk to compute the CVAR
@@ -98,7 +82,7 @@ grid on;box on
 ylabel('VaR ; CVaR ') ; legend('\epsilon(s_N^*)','P_f(d^*)','VaR','CVaR(d^*)')
 set(gca,'FontSize',14)
 
-%% NOW ANALYZE THE RESULTS FOR PROGRAM 2 (individual requirements)
+%% Analyse individual requirements
 
 %% Program-2
 % min_{d\in \Theta , \zeta_j^{(i)}>0} \ lbrace J(d) +\sum\limits_{j=1}^{n_g} \rho_j \sum\limits_{i=1}^{N}  \zeta_j^{(i)}
