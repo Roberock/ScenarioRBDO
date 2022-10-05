@@ -4,10 +4,6 @@
 
 **Scenario Risk-based design for convex reliability functions (constraints relaxation) 
 
-[] Garatti, Simone & Campi, Marco. (2019). Risk and complexity in scenario optimization. Mathematical Programming. https://doi.org/10.1007/s10107-019-01446-4
-
-[] Roberto Rocchetta, Luis G. Crespo, "_A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds_" , Reliability Engineering & System Safety, Volume -, 2021, ...
-
 ``` bibtex
 @article{ROCCHETTA2021107900, 
 title = {A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds},
@@ -29,8 +25,6 @@ doi = "https://doi.org/10.1016/j.ress.2019.106755",
 url = "http://www.sciencedirect.com/science/article/pii/S0951832019309639",
 author = "Roberto Rocchetta and Luis G. Crespo and Sean P. Kenny" }
 ```
-
-
 
 ``` bibtex
 @proceedings{10.1115/DSCC2019-8949,
