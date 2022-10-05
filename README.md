@@ -1,8 +1,8 @@
-# ScenarioRBDO
+# ScenarioRBDO  (Data-driven reliability-based design optimization)
  
-### Pleae aknowledge the following works
+## Pleae aknowledge the following works
 
-# Scenario Risk-based design for convex reliability functions (constraints relaxation) 
+* For Risk-based design with convex reliability functions (constraints relaxation and using scenario theory) 
 
 ``` bibtex
 @article{ROCCHETTA2021107900, 
@@ -14,7 +14,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095183202100418X},
 author = {Roberto Rocchetta and Luis G. Crespo}}
 ```
 
-# Scenario RBDO for non-convex problems
+* For scenario reliability based design optimization (for non-convex problems and using scenario theory)
 
 ``` bibtex
 @article{ ROCCHETTA2020106755, 
