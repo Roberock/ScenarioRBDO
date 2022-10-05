@@ -2,7 +2,7 @@
  
 ### Pleae aknowledge the following works
 
-**Scenario Risk-based design for convex reliability functions (constraints relaxation) 
+# Scenario Risk-based design for convex reliability functions (constraints relaxation) 
 
 ``` bibtex
 @article{ROCCHETTA2021107900, 
@@ -14,7 +14,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095183202100418X},
 author = {Roberto Rocchetta and Luis G. Crespo}}
 ```
 
-** Scenario RBDO for non-convex problems
+# Scenario RBDO for non-convex problems
 
 ``` bibtex
 @article{ ROCCHETTA2020106755, 
