@@ -8,6 +8,10 @@
 
 [] Roberto Rocchetta, Luis G. Crespo, "_A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds_" , Reliability Engineering & System Safety, Volume -, 2021, ...
 
+``` bibtex
+@article{ROCCHETTA2021107900, title = {A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds}, journal = {Reliability Engineering & System Safety}, volume = {216},pages = {107900},year = {2021},issn = {0951-8320}, doi = {https://doi.org/10.1016/j.ress.2021.107900}, url = {https://www.sciencedirect.com/science/article/pii/S095183202100418X}, author = {Roberto Rocchetta and Luis G. Crespo}}
+```
+
 ** Scenario RBDO for non-convex problems
 
 [] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, "_A scenario optimization approach to reliability-based design_", Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
