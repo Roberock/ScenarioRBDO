@@ -1,6 +1,6 @@
 # ScenarioRBDO
  
-### References
+### Pleae aknowledge the following works
 
 **Scenario Risk-based design for convex reliability functions (constraints relaxation) 
 
