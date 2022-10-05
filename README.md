@@ -9,16 +9,39 @@
 [] Roberto Rocchetta, Luis G. Crespo, "_A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds_" , Reliability Engineering & System Safety, Volume -, 2021, ...
 
 ``` bibtex
-@article{ROCCHETTA2021107900, title = {A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds}, journal = {Reliability Engineering & System Safety}, volume = {216},pages = {107900},year = {2021},issn = {0951-8320}, doi = {https://doi.org/10.1016/j.ress.2021.107900}, url = {https://www.sciencedirect.com/science/article/pii/S095183202100418X}, author = {Roberto Rocchetta and Luis G. Crespo}}
+@article{ROCCHETTA2021107900, 
+title = {A scenario optimization approach to reliability-based and risk-based design: Soft-constrained modulation of failure probability bounds},
+journal = {Reliability Engineering & System Safety}, 
+volume = {216},pages = {107900},year = {2021},issn = {0951-8320}, 
+doi = {https://doi.org/10.1016/j.ress.2021.107900}, 
+url = {https://www.sciencedirect.com/science/article/pii/S095183202100418X}, 
+author = {Roberto Rocchetta and Luis G. Crespo}}
 ```
 
 ** Scenario RBDO for non-convex problems
 
-[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, "_A scenario optimization approach to reliability-based design_", Reliability Engineering & System Safety, Volume 196, 2020, 106755, ISSN 0951-8320, https://doi.org/10.1016/j.ress.2019.106755.
+``` bibtex
+@article{ ROCCHETTA2020106755, 
+title = "A scenario optimization approach to reliability-based design", 
+journal = "Reliability Engineering & System Safety", 
+volume = "196", pages = "106755", year = "2020", issn = "0951-8320", 
+doi = "https://doi.org/10.1016/j.ress.2019.106755", 
+url = "http://www.sciencedirect.com/science/article/pii/S0951832019309639",
+author = "Roberto Rocchetta and Luis G. Crespo and Sean P. Kenny" }
+```
 
-[] Roberto Rocchetta, Luis G. Crespo, Sean P. Kenny, "_Solution of the benchmark control problem by scenario optimization_", Dynamic Systems and Control Conference, 2019, https://doi.org/10.1115/DSCC2019-8949
 
 
+``` bibtex
+@proceedings{10.1115/DSCC2019-8949,
+author = {Rocchetta, Roberto and Crespo, Luis G. and Kenny, Sean P.}, 
+title = "{Solution of the Benchmark Control Problem by Scenario Optimization}", 
+series = {Dynamic Systems and Control Conference},
+year = {2019}, month = {10}, 
+doi = {10.1115/DSCC2019-8949}, 
+url = {https://doi.org/10.1115/DSCC2019-8949}}
+```
+ 
 ## Soft-Constrained Scenario Reliability-Based Design Optimization (RBDO) 
 
 This work uses scenario optimization theory to solve RBDO problems given data. Specifically,a soft-constrained optimization program is used to solve RBDO problems. A mode of the uncertainty it is not needed to carry on with the RBDO. Thus, scenario-based solutions of RBDO problems are not biased by unwarranted assumptions on the uncertain quantities given a lack of statistical samples. Scenario theory prescribes powerful  bounds on the reliability of the system. These bounds (prospective-reliability bounds) hold distribution free, non asymptotically and quantify the uncertainty affecting the desing and which is due to 1) lack of data  2) overly complex design solutoins 
